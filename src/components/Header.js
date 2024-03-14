@@ -116,7 +116,7 @@ const Header = () => {
             </div>
           </Link>
           <nav className=" h-full  w-1/3 hidden lg:block ">
-            <ul className="flex  justify-around items-center h-full w-full font-light">
+            <ul className="flex  justify-between gap-5 items-center h-full w-full font-light">
               {menuList?.map((val, i) => {
                 return (
                   <li
@@ -164,7 +164,13 @@ const Header = () => {
         </div>
       </header>
       <div className="relative">
-        {menuToggle && <SideMenu data={menuList}  setMenuToggle={setMenuToggle} path={location.pathname} />}
+        {menuToggle && (
+          <SideMenu
+            data={menuList}
+            setMenuToggle={setMenuToggle}
+            path={location.pathname}
+          />
+        )}
       </div>
 
       {/* search modal  */}
